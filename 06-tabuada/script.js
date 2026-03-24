@@ -42,7 +42,7 @@ function calcularDivisao(valor) {
     let listaDivisao = []
 
     for (let i = 1; i <= 10; i++)
-        listaDivisao.push(Number((valor / i).toFixed(2)))
+        listaDivisao.push((valor / i).toFixed(2))
 
     return listaDivisao
 }
