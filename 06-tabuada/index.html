@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tabuada Estendida</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
 </head>
 <body>
 
@@ -17,10 +18,10 @@
 
         <div class="campo">
             <label>Número</label>
-            <input type="number" placeholder="Ex: 7" />
+            <input type="number" placeholder="Ex: 7" id="valor"/>
         </div>
 
-        <button>Gerar Tabuada</button>
+        <button onclick="handleClick()">Gerar Tabuada</button>
 
         <div class="resultado">
             <p class="resultado-titulo">Resultado</p>
@@ -35,20 +36,36 @@
                             <th>Divisão</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tbody">
                         <tr>
                             <td>1</td>
-                            <td>8</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>7.00</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                        </tr>
+                        <tr>
                             <td>5</td>
-                            <td>14</td>
-                            <td>3.50</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
                         </tr>
                     </tbody>
                 </table>
