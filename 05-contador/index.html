@@ -18,10 +18,10 @@
 
         <div class="campo">
             <label>Quantidade</label>
-            <input type="number" placeholder="Ex: 5" />
+            <input type="number" placeholder="Ex: 5" id="quantidade"/>
         </div>
 
-        <button>Gerar</button>
+        <button onclick="handleClick()">Gerar</button>
 
         <div class="resultado">
             <p class="resultado-titulo">Resultado</p>
@@ -36,22 +36,7 @@
                             <th>Potências de 2</th>
                         </tr>
                     </thead>
-                    <tbody id="tbody">
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>5</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>4</td>
-                            <td>3</td>
-                            <td>10</td>
-                            <td>2</td>
-                        </tr>
-                    </tbody>
+                    <tbody id="tbody"></tbody>
                 </table>
             </div>
         </div>
