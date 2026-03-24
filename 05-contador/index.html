@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contador</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
 </head>
 <body>
 
-  <div class="container">
+    <div class="container">
 
-    <a href="../index.html">← Voltar</a>
+        <a href="../index.html">← Voltar</a>
 
-    <h1>Contador</h1>
-    <p>Informe a quantidade de termos para gerar cada sequência.</p>
+        <h1>Contador</h1>
+        <p>Informe a quantidade de termos para gerar cada sequência.</p>
 
-    <div class="campo">
-      <label>Quantidade</label>
-      <input type="number" placeholder="Ex: 5"/>
+        <div class="campo">
+            <label>Quantidade</label>
+            <input type="number" placeholder="Ex: 5" />
+        </div>
+
+        <button>Gerar</button>
+
+        <div class="resultado">
+            <p class="resultado-titulo">Resultado</p>
+            <div class="tabela-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Contagem</th>
+                            <th>Pares</th>
+                            <th>Ímpares</th>
+                            <th>Múlt. de 5</th>
+                            <th>Potências de 2</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>10</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </div>
-
-    <button>Gerar</button>
-
-    <div class="resultado">
-      <p class="resultado-titulo">Resultado</p>
-      <div class="tabela-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Contagem</th>
-              <th>Pares</th>
-              <th>Ímpares</th>
-              <th>Múlt. de 5</th>
-              <th>Potências de 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>1</td>
-              <td>5</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>4</td>
-              <td>3</td>
-              <td>10</td>
-              <td>2</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-  </div>
 
 </body>
 </html>
