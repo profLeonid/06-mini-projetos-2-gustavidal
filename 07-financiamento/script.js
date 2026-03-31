@@ -56,7 +56,16 @@ function criarLinha(mes, parcela, juros, totalMes, divida) {
     tdTotalMes.textContent = totalMes
     tdDivida.textContent   = divida
 
-    tr.replaceChildren(tdMes, tdParcela, tdJuros, tdTotalMes, tdDivida)
+    tdParcela.classList.add('col-parcela')
+    tdJuros.classList.add('col-juros')
+    tdTotalMes.classList.add('col-total')
+    tdDivida.classList.add('col-saldo')
+
+    tr.replaceChildren(
+        tdMes, 
+        tdParcela, tdJuros, 
+        tdTotalMes, tdDivida
+    )
 
     tbody.appendChild(tr)
 }
@@ -68,15 +77,22 @@ function handleClick() {
     const taxa     = Number(document.getElementById('taxa').value)
     const parcelas = Number(document.getElementById('parcelas').value)
 
-    const listaMeses   = definirMeses(parcelas)
+    const listaMeses       = definirMeses(parcelas)
     const valorParcelas    = calcularValorParcela(valor, parcelas)
     const listaSaldoDivida = calcularSaldoDevedor(listaMeses, valor, valorParcelas)
-    const listaJuros   = calcularJurosMensal(listaSaldoDivida, taxa)
+    const listaJuros       = calcularJurosMensal(listaSaldoDivida, taxa)
     
     document.getElementById('tbody').replaceChildren()
     
     for (let i = 0; i < listaMeses.length; i++) {
         let listaTotalMes   = calcularTotalMes(valorParcelas, listaJuros[i])
-        criarLinha(listaMeses[i], valorParcelas, listaJuros[i], listaTotalMes, listaSaldoDivida[i])
+        
+        criarLinha(
+            listaMeses[i], 
+            `R$ ${valorParcelas.toFixed(2)}`, 
+            `R$ ${listaJuros[i].toFixed(2)}`, 
+            `R$ ${listaTotalMes.toFixed(2)}`, 
+            `R$ ${listaSaldoDivida[i].toFixed(2)}`
+        )
     }
 }
